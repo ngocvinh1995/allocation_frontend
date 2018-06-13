@@ -1,0 +1,8 @@
+.tableHeader{
+    margin-left: 100px;
+  }
+  .dashboad{
+    /* margin-left: 100px; */
+  }
+
+  .input_error {    border-color: #de995e;    color:red;    margin-left: -110px;  }

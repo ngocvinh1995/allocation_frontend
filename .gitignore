@@ -1,0 +1,10 @@
+/IFIPageViewV2/vendors
+/IFIPageViewV2/build
+/IFIPageViewV2/docs
+/IFIPageViewV2/production
+/Allocation
+/vendors/
+/production/
+/docs/
+/build/
+*.rar
