@@ -88,7 +88,7 @@ class ProjectManager extends React.Component{
     onChangePage(page,sizePage) {
         // alert(page);
         if(page){
-            this.fetchData(page,sizePage);
+            this.fetchData(this.state.group_id,page,sizePage);
         }
            
     }

@@ -7,7 +7,8 @@ export const ProjectService = {
     deleteProject,
     updateProject,
     getGroup,
-    addProject
+    addProject,
+    getAllocationsByPage
 
 };
 
@@ -16,7 +17,16 @@ function getProjectByPage(group_id,page, pageSize){
         method: "GET",
         headers: authHeader()
     };
-    let url = systemConstants.API_URL + "/api/projects/getProjectsOfGroup?group_id="+group_id+"&page="+page+"&pageSize="+pageSize;
+    let url = systemConstants.API_URL + "/api/projects/ProjectsInGroup?group_id="+group_id+"&page="+page+"&pageSize="+pageSize;
+
+    return fetch(url,requestOptions).then(handleResponse);
+}
+function getAllocationsByPage(page, pageSize,project_id){
+    const requestOptions = {
+        method: "GET",
+        headers: authHeader()
+    };
+    let url = systemConstants.API_URL + "/api/allocations/findAllocationByProjectID?project_id="+project_id+"&page="+page+"&pageSize="+pageSize;
 
     return fetch(url,requestOptions).then(handleResponse);
 }

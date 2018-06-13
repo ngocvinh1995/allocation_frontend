@@ -6,6 +6,7 @@ import {users} from './user.reducer';
 import {authentication} from './authentication.reducer';
 import {leaveCategory} from './leaveType.reducer';
 import {group} from './group.reducer';
+import {allocation} from './allocation.reducer';
 import {alert} from './alert.reducer';
 
 
@@ -17,7 +18,8 @@ const rootReducer = combineReducers({
   authentication,
   leaveCategory,
   alert,
-  group
+  group,
+  allocation
 });
 
 export default rootReducer;
